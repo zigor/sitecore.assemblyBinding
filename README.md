@@ -9,7 +9,6 @@ The assemblyBinding element can be defined in a sitecore include configuraiton f
 
 ##Installation
 Install the package using the Sitecore Installation Wizard. 
-The package is built for Sitecore 8.2
 
 ##Instructions
 
