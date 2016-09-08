@@ -1,0 +1,6 @@
+﻿<Project>
+  <FolderSync SynchronizeProjectOutputFolderOnBuild="True">
+    <Folder SourceFolder="C:\inetpub\wwwroot\sc82\Sitecore.Includes.AssemblyBinding\Sitecore.Includes.AssemblyBinding\bin" DestinationFolder="bin\" Mode="Copy" Pattern="Sitecore.Includes.AssemblyBinding.dll" />
+    <Folder SourceFolder="C:\inetpub\wwwroot\sc82\Sitecore.Includes.AssemblyBinding\Sitecore.Includes.AssemblyBinding\App_Config\Include" DestinationFolder="App_Config\Include\" Mode="Copy" Pattern="Sitecore.Includes.AssemblyBinding.config" />
+  </FolderSync>
+</Project>
