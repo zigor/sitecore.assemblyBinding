@@ -8,6 +8,9 @@ namespace Sitecore.Includes.AssemblyBinding.Data
     /// </summary>
     public class CodeBase
     {
+        /// <summary>
+        /// The href
+        /// </summary>
         private string href;
 
         /// <summary>

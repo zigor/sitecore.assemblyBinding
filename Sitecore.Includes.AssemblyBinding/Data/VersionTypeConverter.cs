@@ -47,7 +47,11 @@ namespace Sitecore.Includes.AssemblyBinding.Data
         /// </returns>
         public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
-            return Version.Parse((string) value);
+            if (value != null)
+            {
+                return Version.Parse((string) value);
+            }
+            return null;
         }
 
         /// <summary>
@@ -60,8 +64,7 @@ namespace Sitecore.Includes.AssemblyBinding.Data
         /// <returns>
         /// An <see cref="T:System.Object" /> that represents the converted value.
         /// </returns>
-        public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value,
-            Type destinationType)
+        public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
         {
             return ((Version) value).ToString();
         }

@@ -8,7 +8,14 @@ namespace Sitecore.Includes.AssemblyBinding.Data
     /// </summary>
     public class AssemblyIdentity
     {
+        /// <summary>
+        /// The public key token
+        /// </summary>
         private string publicKeyToken;
+
+        /// <summary>
+        /// The culture
+        /// </summary>
         private string culture;
 
         /// <summary>

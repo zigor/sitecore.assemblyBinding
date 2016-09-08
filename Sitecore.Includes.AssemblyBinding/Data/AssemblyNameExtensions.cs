@@ -1,11 +1,12 @@
 ﻿using System.Linq;
 using System.Reflection;
-using System.Text;
 using Sitecore.Diagnostics;
-using Sitecore.StringExtensions;
 
 namespace Sitecore.Includes.AssemblyBinding.Data
 {
+    /// <summary>
+    /// AssemblyName extensions
+    /// </summary>
     public static class AssemblyNameExtensions
     {
         /// <summary>
