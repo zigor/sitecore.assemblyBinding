@@ -1,4 +1,4 @@
-# Sitecore-AssemblyBinding
+# Sitecore.AssemblyBinding
 Enables &lt;assemblyBinding> definition in Sitecore include configs.
 
 The assemblyBinding element can be defined in a sitecore include configuraiton file (auto-include) in the same way how it is done in web.config. Moving it to Sitecore auto-include files gives a few advantages:
