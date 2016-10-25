@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Sitecore.Diagnostics;
 using Sitecore.Includes.AssemblyBinding.Data;
+using Sitecore.IO;
 
 namespace Sitecore.Includes.AssemblyBinding.BindingPolicy
 {
@@ -66,7 +67,7 @@ namespace Sitecore.Includes.AssemblyBinding.BindingPolicy
             if (dependentAssembly.CodeBase != null && dependentAssembly.CodeBase.Version != null && !string.IsNullOrEmpty(dependentAssembly.CodeBase.Href))
             {
                 assemblyName.Version = dependentAssembly.CodeBase.Version;
-                assemblyName.CodeBase = dependentAssembly.CodeBase.Href;
+                assemblyName.CodeBase = FileUtil.MapPath(dependentAssembly.CodeBase.Href);
 
                 return assemblyName;
             }
@@ -98,7 +99,7 @@ namespace Sitecore.Includes.AssemblyBinding.BindingPolicy
         /// </summary>
         /// <param name="assemblyName">Name of the assembly.</param>
         /// <returns></returns>
-        private DependentAssembly Match(AssemblyName assemblyName)
+        private DependentAssembly Match(AssemblyName assemblyName)  
         {
             var pattern = assemblyName.ToAssemblyIdentity();
 
