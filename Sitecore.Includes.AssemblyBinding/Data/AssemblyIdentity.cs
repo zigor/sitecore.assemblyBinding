@@ -78,7 +78,7 @@ namespace Sitecore.Includes.AssemblyBinding.Data
     public bool Match(AssemblyIdentity pattern)
     {
       return this.Name == pattern.Name &&
-             this.Culture == pattern.Culture &&
+             (this.Culture == pattern.Culture || this.Culture == null && pattern.Culture == "neutral") &&
              (string.IsNullOrEmpty(this.PublicKeyToken) || this.PublicKeyToken == pattern.PublicKeyToken) &&
              (this.ProcessorArchitecture == ProcessorArchitecture.None || this.ProcessorArchitecture == pattern.ProcessorArchitecture);
     }

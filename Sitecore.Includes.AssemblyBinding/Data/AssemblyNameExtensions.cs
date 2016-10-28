@@ -22,7 +22,7 @@ namespace Sitecore.Includes.AssemblyBinding.Data
       {   
         Name = assemblyName.Name,
         Culture = assemblyName.CultureName,
-        PublicKeyToken = string.Join(string.Empty, assemblyName.GetPublicKeyToken().Select(b => b.ToString("x2"))),
+        PublicKeyToken = string.Join(string.Empty, assemblyName.GetPublicKeyToken()?.Select(b => b.ToString("x2") ) ?? Enumerable.Empty<string>()),
         ProcessorArchitecture = assemblyName.ProcessorArchitecture
       };
     }
